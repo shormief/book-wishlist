@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="start.css">
+		<script src="script.js" defer></script>
+		<link href="https://fonts.googleapis.com/css?family=Quicksand|Patrick+Hand+SC|Josefin+Sans" rel="stylesheet">
+		<link rel="icon" type="image/png" href="https://png.pngtree.com/svg/20170613/plan_328501.png">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<div id="navbar">
+			<nav>
+				<div class="logo">
+					<a href="index.html"><img src="https://png.pngtree.com/svg/20170613/plan_328501.png"></a>
+				</div>
+			</nav>
+		</div>
+		<!-- HEADING -->
+		<div id="heading">
+			<h2>Please answer a few questions before adding books to your wishlist</h2>	
+		</div>
+		<!-- QUESTION FORM -->
+		<div id="questions">
+			<form method="POST" action="/searchForBooks">
+				Reading Speed (pages/minutes): <input id="readingSpeed" type="number" name="readingSpeed">
+				<br><br>
+				Reading Time (minutes): <input id="readingTime" type="number" name="readingTime">
+				<br><br>
+				Start Date (minutes): <input id="startDate" type="date" min="" value="" name="startDate">
+				<br><br>
+				<!-- Generate your timeline -->
+				<input id="submit" type="submit" name="submitButton" value="Search">
+			</form>
+		</div>
+	</body>
+</html>

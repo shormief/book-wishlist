@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Final Prototype</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js" defer></script>
+		<link href="https://fonts.googleapis.com/css?family=Palanquin+Dark|Josefin+Sans|Fredoka+One" rel="stylesheet">
+		<link rel="icon" type="image/png" href="https://png.pngtree.com/svg/20170613/plan_328501.png">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div id="top">
+			<!-- NAVBAR -->
+			<div id="navbar">
+				<nav>
+					<div class="logo">
+						<a href="index.html"><img src="https://png.pngtree.com/svg/20170613/plan_328501.png"></a>
+					</div>
+				</nav>
+			</div>
+			<!-- HEADING -->
+			<div id="heading">
+				<h1>Welcome!</h1>
+			</div>
+			<!-- BUTTONS -->
+			<div id="start-button">
+				<button class="active" onclick="location.href = '/start.html'">Start</button>
+				<button class="active" onclick="toAbout()">About</button>
+			</div>
+		</div>
+		<!-- ABOUT -->
+		<div id="read-more">
+			<h1>About</h1>
+			<p>This website comes out of my love for reading. It creates a basic timetable of books that the user adds to their wishlist. The search function is powered by the Google Books API. User info, such as reading speed and amount of time committed to reading every day, is collected to generate the timetable.</p>
+			<!-- button leading to start page -->
+			<button class="active" id="start-2" onclick="location.href = '/start.html'">Start</button>
+		</div>
+	</body>
+</html>

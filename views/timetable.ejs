@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Final Prototype</title>
+		<link rel="stylesheet" type="text/css" href="timetable.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="script.js" defer></script>
+		<link href="https://fonts.googleapis.com/css?family=Quicksand|Patrick+Hand+SC|Josefin+Sans" rel="stylesheet">
+		<link rel="icon" type="image/png" href="https://png.pngtree.com/svg/20170613/plan_328501.png">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<div id="navbar">
+			<nav>
+				<div class="logo">
+					<a href="index.html"><img src="https://png.pngtree.com/svg/20170613/plan_328501.png"></a>
+				</div>
+			</nav>
+		</div>
+		<!-- GO TO WISHLIST BUTTON -->
+		<div id="goToWishlist">
+			<form method="POST" action="/addToWishlist">
+				<input id="submit" type="submit" name="submitButton" value="Go to Wishlist">
+			</form>
+		</div>
+		<!-- HEADING -->
+		<div id="heading">
+			<h2>Timetable</h2> 
+		</div>
+		<!-- TIMETABLE -->
+		<div id="list">
+			<!-- getting data from allTheUserData array -->
+			<% var index = allTheUserData.length - 1 %>
+			<% var speed = allTheUserData[index].speed %>
+			<% var time = allTheUserData[index].time %>
+			<!-- getting the date -->
+			<% var startDate = new Date(allTheUserData[index].date) %>
+			<% var pagesPerDay = speed * time; %>
+			<% var totalDays; %>
+			<% if (allTheBookData.length === 0) { %> 
+				<p style="font-size: 16px; text-align: center;">Please add some books</p>
+			<% } %>
+			<% for(var i = 0; i < allTheBookData.length; i++) { %>
+				<!-- making sure that the user inputted values -->
+				<% if (speed === '' || time === ''){ %>
+						<p style="font-size: 16px; text-align: center;">Please enter data before generating a timetable</p>
+				<% } else { %>
+					<div id="content" class="one-edge-shadow">						 
+						<h4 id="title"><%=allTheBookData[i].title %></h4>
+						<% totalDays = (allTheBookData[i].pageCount / pagesPerDay); %>
+						<!-- in case totalDays isn't a whole number -->
+						<% if ((totalDays % 1) !== 0) { %>
+							<% totalDays = (totalDays | 0) + 1; %>
+						<% } %>
+						<!-- during the date into a string -->
+						<% var currentDate = startDate.toUTCString(); %>
+						<% currentDate = currentDate.split(' ').slice(0, 4).join(' '); %>
+						<!-- priting the start date -->
+						<p>Start Date: <%=currentDate %></p>
+						<!-- calculating the end date -->
+						<% startDate.setDate(startDate.getDate() + totalDays); %>
+						<!-- during the date into a string -->
+						<% currentDate = startDate.toUTCString(); %>
+						<% currentDate = currentDate.split(' ').slice(0, 4).join(' '); %>
+						<!-- printing the end date -->
+						<p>End Date: <%=currentDate %></p>
+						<!-- incrementing day by one -->
+						<% startDate.setDate(startDate.getDate() + 1); %>
+					<% } %>
+					
+				</div>
+			<% } %>
+
+			
+		</div>
+	</body>
+</html>

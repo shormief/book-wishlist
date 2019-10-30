@@ -1,0 +1,205 @@
+body {
+	color: rgba(0,0,0,.5);
+	background-color: #F7EBEC;
+	margin: 0;
+	/*fade-in*/
+	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*LOGO*/
+.logo {
+	display: flex;
+	justify-content: center;
+}
+.logo img {
+	width: 4vw;
+}
+
+/*NAVBAR*/
+#navbar {
+	/*Design taken from //*http://www.flatuicolorpicker.com/*/
+	overflow: hidden;
+	box-shadow: 0em 0.375em 1em .7em rgba(0, 0, 0, 0.1);
+}
+nav {
+	/*centering using flex*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+nav a {
+	display: inline;
+	padding: 3vh; /*adding padding b/w links*/
+	color: rgba(0,0,0,.5); 
+	font-weight: 800; 
+	/*font-family: Quicksand, sans-serif;
+	text-transform: uppercase;*/
+}
+
+/*HEADING*/
+#heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40vh;
+}
+
+/*"BUTTONS"*/
+#goToButtons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 7vh;
+	margin-right: 3vw;
+}
+#startButton {
+	margin-left: 6vh;
+	padding-top: 1vh;
+}
+button {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 17px;
+	border-radius: 20px;
+	border: 0px;
+	background-color: transparent;
+}
+button:focus {
+	outline: 0;  
+}
+.active {
+	text-decoration: none;
+	color: rgba(0,0,0,.5);
+	/*Underline Effect*/
+	background-image: linear-gradient(120deg, #EACBD2 0%, #EACBD2 100%);
+	background-repeat: no-repeat;
+	background-size: 100% 0.2em;
+	background-position: 0 88%;
+	transition: background-size 0.25s ease-in;
+}
+.active:hover {
+	background-size: 100% 100%;
+}
+
+/*GO TO WISHLIST BUTTON*/
+input[type=submit] {
+	text-decoration: none;
+	background-color: transparent;
+	height: 5vh;
+	border-radius: 20px;
+	border: 0;
+	padding: 2.5vh 0.5vw 4.5vh 0.5vw;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 17px;
+	color: #705D56;
+	outline: none;
+	/*Underline Effect*/
+	background-image: linear-gradient(120deg, #EACBD2 0%, #EACBD2 100%);
+	background-repeat: no-repeat;
+	background-size: 100% 0.2em;
+	background-position: 0 88%;
+	transition: background-size 0.25s ease-in;
+}
+input[type=submit]:hover {
+	background-size: 100% 100%;
+}
+
+/*HEADING*/
+#heading {
+	margin-top: -4vh;
+}
+#heading h2 {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/*SEARCH*/
+#search {
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	margin-top: -55vh;
+}
+input[type=text] {
+	width: 70vh;
+	height: 5vh;
+	border-radius: 20px;
+	border: 0;
+	padding: 0.8vh 1.5vh 0vh 1.5vh;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	color: #705D56;
+	outline: none;
+	margin-right: 2vh;
+}
+#searchButton {
+	height: 5vh;
+	border-radius: 20px;
+	border: 0;
+	padding: 0.8vh 1.5vh 0vh 1.7vh;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+	color: #705D56;
+	background-color: #EACBD2;
+	outline: none;
+}
+
+/*Fixing up autocomplete styling to match the rest of the design*/
+/*https://stackoverflow.com/questions/175951/how-do-i-stop-chrome-from-yellowing-my-sites-input-boxes*/
+input:-webkit-autofill {
+	font-family: 'Josefin Sans', sans-serif;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: #705D56;
+}
+
+input:-webkit-autofill:focus {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/*RESULTS*/
+#results {
+	height: 100vh;
+	width: 50vw;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Josefin Sans', sans-serif;
+
+	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+#results img {
+	margin-right: 12vh;
+	/*border: 5px solid #EACBD2;*/
+	border-radius: 10px;
+	/*width: 20vw;*/
+}
+/*shadow for the book thumnails*/
+.one-edge-shadow {
+	-webkit-box-shadow: 0 2px 6px 3px rgba(0,0,0,.5);;
+	   -moz-box-shadow: 0 2px 6px 3px rgba(0,0,0,.5);;
+	        box-shadow: 0 2px 6px 3px rgba(0,0,0,.5);;
+}
+.pVolInfo {
+	display: flex;
+	align-items: center;
+	padding: 5vh;
+}
+.pVolInfo h4 {
+	/*margin-top: -0.5vh;*/
+}

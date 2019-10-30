@@ -1,0 +1,118 @@
+body {
+	color: rgba(0,0,0,.5);
+	background-color: #F7EBEC;
+	margin: 0;
+	/*fade-in*/
+	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*LOGO*/
+.logo {
+	display: flex;
+	justify-content: center;
+}
+.logo img {
+	width: 4vw;
+}
+
+/*NAVBAR*/
+#navbar {
+	/*Design taken from //*http://www.flatuicolorpicker.com/*/
+	overflow: hidden;
+	box-shadow: 0em 0.375em 1em .7em rgba(0, 0, 0, 0.1);
+}
+nav {
+	/*centering using flex*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+nav a {
+	display: inline;
+	padding: 3vh; /*adding padding b/w links*/
+	color: rgba(0,0,0,.5); 
+	font-weight: 800; 
+	font-family: Quicksand, sans-serif;
+	text-transform: uppercase;
+}
+
+/*HEADING*/
+#heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+}
+#heading h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+}
+
+/*QUESTIONS*/
+#questions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin-top: -50vh;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px;
+}
+/*FORM*/
+form {
+	margin-top: 5vh;
+}
+/*INPUT STYLING*/
+/*TEXT*/
+input[type=number] {
+	width: 180px;
+	height: 5vh;
+	border-radius: 20px;
+	border: 0;
+	padding: 0.5vh 1.5vh;
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #705D56;
+	outline: none;
+}
+/*DATE*/
+input[type=date] {
+	width: 180px;
+	height: 5vh;
+	border-radius: 20px;
+	border: 0;
+	padding: 1.5vh 1.5vh 0.5vh 0.5vh;
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #705D56;
+	outline: none;
+}
+
+/*SUBMIT*/
+input[type=submit] {
+	width: 120px;
+	margin-top: 5vh;
+	padding-top: 3vh;
+	padding-bottom: 2vh;
+	background: pink;
+	text-align: center;
+	border: 0;
+	border-radius: 20px;
+	border-color: transparent;
+	background: linear-gradient(135deg, #EACBD2, #EACBD2);
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	color: #705D56;
+    outline: 0;
+}

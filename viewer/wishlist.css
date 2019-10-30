@@ -1,0 +1,145 @@
+body {
+	color: rgba(0,0,0,.5);
+	background-color: #F7EBEC;
+	margin: 0;
+	/*fade-in*/
+	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*LOGO*/
+.logo {
+	display: flex;
+	justify-content: center;
+}
+.logo img {
+	width: 4vw;
+}
+
+/*NAVBAR*/
+#navbar {
+	/*Design taken from //*http://www.flatuicolorpicker.com/*/
+	overflow: hidden;
+	box-shadow: 0em 0.375em 1em .7em rgba(0, 0, 0, 0.1);
+}
+nav {
+	/*centering using flex*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+nav a {
+	display: inline;
+	padding: 3vh; /*adding padding b/w links*/
+	color: rgba(0,0,0,.5); 
+	font-weight: 800; 
+}
+
+/*BACK TO SEARCH BUTTON*/
+#goToButtons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 7vh;
+	margin-right: 3vw;
+}
+#searchSubmit {
+	margin-left: 6vh;
+}
+input[type=submit] {
+	text-decoration: none;
+	background-color: transparent;
+	height: 5vh;
+	border-radius: 20px;
+	border: 0;
+	padding: 2.5vh 0.5vw 4.5vh 0.5vw;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 17px;
+	color: #705D56;
+	outline: none;
+	/*Underline Effect*/
+	background-image: linear-gradient(120deg, #EACBD2 0%, #EACBD2 100%);
+	background-repeat: no-repeat;
+	background-size: 100% 0.2em;
+	background-position: 0 88%;
+	transition: background-size 0.25s ease-in;
+}
+input[type=submit]:hover {
+	background-size: 100% 100%;
+}
+
+/*HEADING */
+#heading {
+	margin-top: -10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40vh;
+}
+#heading h2 {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/*LIST*/
+#list {
+	margin-top: -14vh;
+	/*height: 100vh;*/
+	width: 60vw;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Josefin Sans', sans-serif;
+}
+#volumeInfo {
+	/*background-color: white;*/
+	border-radius: 25px;
+	padding: 2vh;
+	margin-bottom: 2vh;
+}
+#book-img {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 5vh;
+}
+#book-img img {
+	/*width: 25vh;*/
+	border-radius: 10px;
+}
+#book-info {
+	margin-left: 10vh;
+}
+
+/*shadow for the thumbnails*/
+/*https://css-tricks.com/snippets/css/css-box-shadow/*/
+.one-edge-shadow {
+	-webkit-box-shadow: 0 2px 6px 3px rgba(0,0,0,.5);;
+	   -moz-box-shadow: 0 2px 6px 3px rgba(0,0,0,.5);;
+	        box-shadow: 0 2px 6px 3px rgba(0,0,0,.5);;
+}
+
+/*REMOVE BOOK BUTTON*/
+#removeBookButton {
+	margin-top: -2vh;
+	margin-left: -.5vw;
+}
+
+/*TOP TIMETABLE BUTTON*/
+#timetableButton {
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+}
+/*BOTTOM TIMETABLE BUTTON*/
+#generateTimetableBottom {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	background-size: 100%;
+}
